@@ -12,7 +12,6 @@
 - Responsive LUMINAER landing page with a portable-kit illustration.
 - Dark and light appearance toggle. On a first visit, the site follows the device preference; after a visitor chooses a theme, the choice is saved in that browser.
 - Navigation links open separate page views for Concept, The Kit, Prototype, Checklist, Help, FAQ, and Feedback. Each view has its own shareable URL, for example <https://luminaer.vercel.app/?page=kit>.
-- A small corner counter displays unique website visitors. It uses CounterAPI.com and will be hidden if the counter service cannot be reached. CounterAPI says it anonymizes visitor details; see its <https://counterapi.com/> privacy and service information.
 - Interactive checklist progress is saved in the visitor's browser.
 - Feedback form submits through FormSubmit to the recipient configured in the HTML. Email delivery may require FormSubmit activation.
 
@@ -44,5 +43,4 @@ The Vercel project is connected to this repository. Changes committed to `main` 
 ## External assets and services
 
 - The prototype image is loaded from a Google Drive thumbnail. The image must remain publicly accessible or be replaced with a stable image URL.
-- The visitor counter relies on CounterAPI.com. If that service is unavailable, the rest of the website continues to work and the badge is hidden.
 - The feedback form relies on FormSubmit and the configured recipient address.
