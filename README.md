@@ -1,51 +1,48 @@
-# LUMINAER — saved website source
+# LUMINAER Website Guide
 
-This repository contains the recovered LUMINAER website source.
+## Live website
 
-## Website
-- Live site: https://luminaer.vercel.app
-- Repository: https://github.com/chaitanyasaiganeshmanda-oss/luminaer
-- Production branch: main
+- Website: <https://luminaer.vercel.app>
+- Source repository: <https://github.com/chaitanyasaiganeshmanda-oss/luminaer>
+- Production branch: `main`
 - Hosting: Vercel
 
-## Files
-- `index.html` — complete single-page website, including its CSS and JavaScript.
+## Website features
+
+- Responsive LUMINAER landing page with a portable-kit illustration.
+- Dark and light appearance toggle. On a first visit, the site follows the device preference; after a visitor chooses a theme, the choice is saved in that browser.
+- Navigation links open separate page views for Concept, The Kit, Prototype, Checklist, Help, FAQ, and Feedback. Each view has its own shareable URL, for example <https://luminaer.vercel.app/?page=kit>.
+- A small corner counter displays unique website visitors. It uses CounterAPI.com and will be hidden if the counter service cannot be reached. CounterAPI says it anonymizes visitor details; see its <https://counterapi.com/> privacy and service information.
+- Interactive checklist progress is saved in the visitor's browser.
+- Feedback form submits through FormSubmit to the recipient configured in the HTML. Email delivery may require FormSubmit activation.
+
+## Project files
+
+- `index.html` — active website. The page content, styles, and browser scripts are included here.
+- `style.css` and `script.js` — older standalone source files; the active page does not load these files.
+- `LUMINAER-website-source (1).zip` — archived source copy.
 - `README.md` — this guide.
 
-## What is included
-The recovered version contains the dark-green LUMINAER design, the portable hygiene-kit concept, prototype image section, 12 proposed kit components, interactive daily hygiene checklist, Help Center, FAQs, feedback form, and footer.
+## Preview locally
 
-## Save a backup on your computer
-1. Open the GitHub repository.
-2. Click the green **Code** button.
-3. Choose **Download ZIP**.
-4. Save the ZIP somewhere safe (for example, Documents\LUMINAER-backup).
-5. Extract it before editing.
+This is a static HTML site and has no build step. From the repository folder, run:
 
-## Edit and publish with GitHub + Vercel
-1. Edit `index.html` locally or directly in GitHub.
-2. Commit changes to the `main` branch.
-3. Vercel is connected to this GitHub repository; a push to `main` should trigger a new deployment.
-4. Open the Vercel project and wait until the deployment status is **Ready**.
-5. Check https://luminaer.vercel.app.
+```powershell
+python -m http.server 8000
+```
 
-## Import the repository into Vercel
-If you ever need to reconnect or create a Vercel project:
-1. Sign in to Vercel.
-2. Select **Add New → Project**.
-3. Import `chaitanyasaiganeshmanda-oss/luminaer` from GitHub.
-4. Select branch `main`.
-5. For this plain static HTML website, use the repository root as the Root Directory. No framework or build command is required; the published file is `index.html`.
-6. Deploy, then add/retain the domain `luminaer.vercel.app` in the project's Domains settings.
+Then open <http://localhost:8000/>. Keep the terminal window open while previewing. Stop the server with `Ctrl+C`.
 
-## Restore from this backup
-If a later edit breaks the site, use GitHub's commit history to open a previous working version of `index.html`, or re-upload the saved backup. Do not replace the working source with an unrelated starter template.
+## Save or restore a backup
 
-## Important note about the prototype image
-The prototype section references an externally hosted Google Drive thumbnail. Keep that image accessible to viewers, or replace the image URL in `index.html` with a stable public image URL you control.
+On GitHub, open the repository and choose **Code → Download ZIP**. To restore an earlier page, use the repository's commit history to recover `index.html` from the desired version.
 
-## Important note about feedback
-The feedback form uses FormSubmit and the recipient address configured in the HTML. FormSubmit may require its email activation/confirmation process before messages are delivered.
+## Publish updates
 
-## Version record
-Recovered from the complete Vercel deployment that served the working 22 KB HTML page on 31 October 2026. This repository copy is intended to preserve that version for future edits and redeployments.
+The Vercel project is connected to this repository. Changes committed to `main` trigger a production deployment. In Vercel, wait for the deployment to show **Ready**, then check <https://luminaer.vercel.app>. The site is configured as a plain static HTML project with the repository root as its deployment directory.
+
+## External assets and services
+
+- The prototype image is loaded from a Google Drive thumbnail. The image must remain publicly accessible or be replaced with a stable image URL.
+- The visitor counter relies on CounterAPI.com. If that service is unavailable, the rest of the website continues to work and the badge is hidden.
+- The feedback form relies on FormSubmit and the configured recipient address.
